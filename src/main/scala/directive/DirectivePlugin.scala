@@ -18,3 +18,20 @@ object DirectivePlugin extends AutoPlugin {
 object DirectiveKeys {
   val directive: TaskKey[Seq[File]] = taskKey("Preprocesses directives")
 }
+
+
+
+object Test {
+
+  Preprocess.lines { ls =>
+    Set("1")
+    List(1, 2, 3)
+    Vector(1)
+    Seq("a")
+    DirectiveKeys.directive
+    val s: String = "asd"
+    val t: Int = 42
+    ???
+  }
+
+}
